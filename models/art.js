@@ -8,7 +8,8 @@ const artSchema = new Schema({
         Title: String,
         Dimensions: {type:Number, required: true, min: 0, max: 9999},
         location: String,
-        Medium: String
+         Medium: String,
+         Year: Number
 
 
 },{

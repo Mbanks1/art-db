@@ -8,3 +8,8 @@ nav {
   display: flex;
   justify-content: space-evenly;
 }
+
+form {
+display: flex;
+justify-content: center;
+}
