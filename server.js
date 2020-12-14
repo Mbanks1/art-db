@@ -21,6 +21,8 @@ require("./config/passport");
 // require routes
 const indexRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
+const artsRouter = require("./routes/arts");
+
 
 const app = express();
 
@@ -36,6 +38,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+
+
+
 // passport middleware
 app.use(
   session({
@@ -50,6 +55,8 @@ app.use(passport.session());
 // router middleware
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
+app.use("/arts" , artsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -66,5 +73,9 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
+
+
+
+
 
 module.exports = app;
