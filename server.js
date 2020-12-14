@@ -55,7 +55,7 @@ app.use(passport.session());
 // router middleware
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
-app.use("/arts" , artsRouter);
+app.use("/arts", artsRouter);
 
 
 // catch 404 and forward to error handler
