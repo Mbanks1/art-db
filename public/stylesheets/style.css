@@ -1,9 +1,10 @@
-body {
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: gray;
+html {
+  background-color: darkorange;
   margin: 0;
 }
 
 nav {
-  background-color: white;
+  background-color:turquoise;
+  display: flex;
+  justify-content: space-evenly;
 }

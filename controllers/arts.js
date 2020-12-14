@@ -10,18 +10,16 @@ module.exports = {
 
 function index(req,res){
     Art.find({}, function(err, arts){
-    res.render('arts/index', {arts})
+    res.render('arts/index', {arts, user: req.user})
     })
 };
 
-
-
 function newArt(req,res) {
-    res.render('arts/new')
+    res.render('arts/new', {user: req.user})
 };
 
 function create(req, res ) {
      Art.create(req.body, function(err, art){
         console.log(art)
-res.redirect('/arts')})
+res.redirect('/arts'), req.user})
 };

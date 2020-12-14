@@ -1,19 +1,13 @@
-<%- include('../partials/header') %> 
+<%- include('../partials/header') %>
+<h1>NEW.EJS</h1>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>TEST</h1>
-</body>
-</html>
+
+<form action="/arts" method='POST'>
+    <label>Name</label>
+    <input type="text" name= 'name'>
+</form>
+
+<%- include('../partials/footer') %>
 
 
 
-
-
-<%- include('../partials/footer') %> 
