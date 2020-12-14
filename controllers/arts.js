@@ -21,9 +21,7 @@ function newArt(req,res) {
 };
 
 function create(req, res ) {
-    
-    Art.create(req.body, function(err, art){
+     Art.create(req.body, function(err, art){
         console.log(art)
-
-    res.redirect('/arts')})
+res.redirect('/arts')})
 };

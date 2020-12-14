@@ -4,7 +4,8 @@ const artCtrl = require('../controllers/arts');
 
 
 router.get('/', artCtrl.index);
-
+router.get('/new', artCtrl.new);
+router.post('/', artCtrl.create);
 
 
 module.exports = router;
