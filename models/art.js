@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 
 
 const artSchema = new Schema({
-        Artist: String,
-        Title: String,
-        Dimensions: {type:Number, required: true, min: 0, max: 9999},
+        artist: String,
+        title: String,
+        dimensions: {type:Number, required: true, min: 0, max: 9999},
         location: String,
-         Medium: String,
-         Year: Number
+         medium: String,
+         year: Number
 
 
 },{

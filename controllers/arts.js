@@ -14,12 +14,14 @@ function index(req,res){
     })
 };
 
+
 function newArt(req,res) {
     res.render('arts/new', {user: req.user})
 };
 
+
 function create(req, res ) {
      Art.create(req.body, function(err, art){
-        console.log(art)
-res.redirect('/arts'), req.user})
+        console.log(req.body)
+res.redirect('/arts')})
 };

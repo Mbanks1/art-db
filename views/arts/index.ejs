@@ -1,8 +1,28 @@
 
 <%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>INDEX.EJS</h1>
+    <%  arts.forEach(function(a){%>
+        <form action="/arts"  method="POST">
+            <label>Artist</label>
+            <div> <%= a.artist %> </div>
+            <button type="submit">X</button>
+        <% }) %> 
+
+       </form>
 
 
-<h1>INDEX.EJS</h1>
+</body>
+</html>
+
+
 
 
 
