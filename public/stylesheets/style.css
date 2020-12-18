@@ -8,9 +8,8 @@ nav {
   justify-content: space-evenly;
 }
 
-form {
-display: flex;
-justify-content: center;
-background-color: lightblue;
+body {
+  display: grid;
 }
+
 
