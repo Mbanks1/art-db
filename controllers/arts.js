@@ -4,7 +4,8 @@ const Art = require('../models/art');
 module.exports = {
         index,
         new: newArt,
-        create
+        create,
+        delete: deleteArt
 };
 
 
@@ -14,14 +15,19 @@ function index(req,res){
     })
 };
 
-
 function newArt(req,res) {
     res.render('arts/new', {user: req.user})
 };
 
-
 function create(req, res ) {
-     Art.create(req.body, function(err, art){
+        req.body.dimensions = 100;
+        Art.create(req.body, function(err, art){
         console.log(req.body)
-res.redirect('/arts')})
+        res.redirect('/arts')})
+};
+
+function deleteArt(req, res) {
+    Art.findByIdAndDelete(req.params.id, (err) => {
+        res.redirect('/arts')
+    })
 };

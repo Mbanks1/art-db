@@ -6,6 +6,7 @@ const artCtrl = require('../controllers/arts');
 router.get('/', artCtrl.index);
 router.get('/new', artCtrl.new);
 router.post('/', artCtrl.create);
+router.delete('/:id', artCtrl.delete)
 
 
 module.exports = router;

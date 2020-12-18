@@ -10,9 +10,19 @@
 <body>
     <h1>INDEX.EJS</h1>
     <%  arts.forEach(function(a){%>
-        <form action="/arts"  method="POST">
+        <form action="/arts/<%= a._id %>?_method=DELETE"  method="POST">
             <label>Artist</label>
             <div> <%= a.artist %> </div>
+            <label>Title:</label>
+            <div><%= a.title  %> </div>
+            <label>Dimensions:</label>
+            <div><%= a.dimensions  %> </div>
+            <label>Location:</label>
+            <div><%= a.location  %> </div>
+            <label>Medium:</label>
+            <div><%= a.medium  %> </div>
+            <label>Year:</label>
+            <div><%= a.year  %> </div>
             <button type="submit">X</button>
         <% }) %> 
 
