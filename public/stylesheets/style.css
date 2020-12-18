@@ -1,5 +1,4 @@
 html {
-  background-color: darkorange;
   margin: 0;
 }
 
@@ -12,5 +11,6 @@ nav {
 form {
 display: flex;
 justify-content: center;
+background-color: lightblue;
 }
 
