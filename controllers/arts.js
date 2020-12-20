@@ -20,7 +20,7 @@ function newArt(req,res) {
 };
 
 function create(req, res ) {
-        req.body.dimensions = 100;
+        //req.body.dimensions = 100;
         Art.create(req.body, function(err, art){
         console.log(req.body)
         res.redirect('/arts')})
