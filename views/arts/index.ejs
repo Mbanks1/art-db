@@ -1,41 +1,32 @@
-
 <%- include('../partials/header') %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>INDEX.EJS</h1>
-    <%  arts.forEach(function(a){%>
-        <form action="/arts/<%= a._id %>?_method=DELETE"  class="card" style="width: 18rem;" method="POST">
-            <label>Artist</label>
-            <div> <%= a.artist %> </div>
-            <label>Title:</label>
-            <div><%= a.title  %> </div>
-            <label>Dimensions:</label>
-            <div><%= a.dimensions  %> </div>
-            <label>Location:</label>
-            <div><%= a.location  %> </div>
-            <label>Medium:</label>
-            <div><%= a.medium  %> </div>
-            <label>Year:</label>
-            <div><%= a.year  %> </div>
-            <button type="submit">X</button>
+<h1>Collection</h1>
+  <table>
+      <thead>
+        <tr>
+            <th>Artist</th>
+            <th>Title</th>
+            <th>Dimensions</th>
+            <th>Location</th>
+            <th>Medium</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%  arts.forEach(function(a){%>
+            <tr>
+                <td><%= a.artist %></td>
+                <td><%= a.title %></td>
+                <td><%= a.dimensions %></td>
+                <td><%= a.location %></td>
+                <td><%= a.medium  %></td>
+                <td><%= a.year  %></td>
+                <form action="arts/<%= a._id %>?_method=DELETE" class='delete-form' method="POST">
+                    <button type='submit'>X</button>
+                </form>
+            </tr>
         <% }) %> 
-
-       </form>
-
-
-</body>
-</html>
-
-
-
-
-
+    </tbody>
+</table>
 
 <%- include('../partials/footer') %>
 

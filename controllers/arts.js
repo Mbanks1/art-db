@@ -5,7 +5,8 @@ module.exports = {
         index,
         new: newArt,
         create,
-        delete: deleteArt
+        delete: deleteArt,
+        show
 };
 
 
@@ -31,3 +32,7 @@ function deleteArt(req, res) {
         res.redirect('/arts')
     })
 };
+
+function show() {
+
+}
