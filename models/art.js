@@ -11,7 +11,6 @@ const artSchema = new Schema({
          medium: String,
          year: Number
 
-
 },{
 
     timestamps: true

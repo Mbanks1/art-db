@@ -6,8 +6,8 @@ const artCtrl = require('../controllers/arts');
 router.get('/', isLoggedIn, artCtrl.index);
 router.get('/new',isLoggedIn, artCtrl.new);
 router.post('/', isLoggedIn, artCtrl.create);
-router.delete('/:id', isLoggedIn,artCtrl.delete)
-
+router.delete('/:id', isLoggedIn, artCtrl.delete);
+router.get('/:id', isLoggedIn, artCtrl.show);
 
 
 function isLoggedIn(req, res, next) {

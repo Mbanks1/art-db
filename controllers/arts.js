@@ -33,6 +33,12 @@ function deleteArt(req, res) {
     })
 };
 
-function show() {
-
-}
+function show(req, res) {
+    Art.findById(req.params.id)
+    .populate('Art').exec(function(err, art){
+        art.find({_id: {$nin: artSchema}},
+            function(err, art){
+                res.render('arts/show',{title: 'Art Details', art})
+            })
+    })
+};
