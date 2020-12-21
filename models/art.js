@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const artSchema = new Schema({
         artist: String,
         title: String,
-        dimensions: {type:Number, required: true, min: 0, max: 9999},
+        dimensions: String,
         location: String,
          medium: String,
          year: Number

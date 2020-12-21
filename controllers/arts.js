@@ -22,8 +22,12 @@ function newArt(req,res) {
 
 function create(req, res ) {
         //req.body.dimensions = 100;
+        
         Art.create(req.body, function(err, art){
-        console.log(req.body)
+        if (err){
+            console.log(err)
+            }
+        console.log(art);
         res.redirect('/arts')})
 };
 
@@ -36,7 +40,7 @@ function deleteArt(req, res) {
 function show(req, res) {
     Art.findById(req.params.id)
     .populate('Art').exec(function(err, art){
-        art.find({_id: {$nin: artSchema}},
+        art.find({_id: {$nin: art}},
             function(err, art){
                 res.render('arts/show',{title: 'Art Details', art})
             })

@@ -1,9 +1,9 @@
 <%- include('../partials/header') %>
 
-<h1>Collection</h1>
-  <table>
-      <thead>
-        <tr>
+ <h1 class="text-center">Collection</h1>
+   <table class="table">
+      <thead class="table-light">
+         <tr>
             <th>Artist</th>
             <th>Title</th>
             <th>Dimensions</th>
@@ -12,6 +12,7 @@
             <th>Year</th>
         </tr>
     </thead>
+
     <tbody>
         <%  arts.forEach(function(a) { %>
             <tr>
@@ -21,9 +22,10 @@
                 <td><%= a.location %></td>
                 <td><%= a.medium  %></td>
                 <td><%= a.year  %></td>
-                <form action="arts/<%= a._id %>?_method=DELETE" class='delete-form' method="POST">
+                <td><a href="/arts/<%= a._id %>">Details</a></td>
+                <td><form action="arts/<%= a._id %>?_method=DELETE" class='delete-form' method="POST">
                     <button type='submit'>X</button>
-                </form>
+                </form></td>
             </tr>
         <% }) %> 
     </tbody>

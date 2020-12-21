@@ -2,20 +2,14 @@
    
 <div class='add-form'>
 <h1>ADD NEW WORK</h1>
-<form class="card" style="width: 18rem;" action="/arts" method='POST'>
-    <label>Artist: </label>
-     <input type="text" name='artist'>
-    <label>Title:</label>
-     <input type="text" name="title">
-    <label>Dimensions:</label>
-     <input type="text" name="dimensions">
-    <label>Location:</label>
-     <input type="text" name="location">
-    <label>Medium:</label>
-     <input type="text" name="medium">
-    <label>Year:</label>
-     <input type="number" name="year">
-    <button type="submit">Add Work</button>
+<form class="card" action="/arts" method='POST'>
+     <input placeholder="Artist" type="text" name='artist'>
+     <input placeholder="Title" type="text" name="title">
+     <input placeholder="Dimensions" type="text" name="dimensions">
+     <input placeholder="Location" type="text" name="location">
+     <input placeholder="Medium" type="text" name="medium">
+     <input placeholder="Year" type="year" name="year">
+    <button class="btn btn-primary" type="submit">Add Work</button>
 </form>
 </div>
 

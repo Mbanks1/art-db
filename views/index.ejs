@@ -1,7 +1,12 @@
 <%- include('partials/header') %>
 
-<h1>ArtDB</h1>
-<br>
-<h3>Hello, <%= user ? user.name : "friend" %></h3>
+<h1 class="text-center"> Art DB </h1>
+
+<a href="/arts/new"><img class="rounded mx-auto d-block" src='https://i.postimg.cc/B6GNV7NK/christies.jpg' alt='christies'/></a>
+
+<div class="text-center">
+    <br>
+    <h3>Hello, <%= user ? user.name : "friend" %></h3>
+    </div>
 
 <%- include('partials/footer') %>
