@@ -9,7 +9,8 @@ const artSchema = new Schema({
         dimensions: String,
         location: String,
          medium: String,
-         year: Number
+         year: Number,
+         favoritedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
 
 },{
 
