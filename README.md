@@ -27,4 +27,8 @@ Eventually, ArtDB will be broken into 2 major parts. A fantasy collection to map
 - EJS
 - Google OAuth
 
-## Planned Changes 
+## Planned Changes:
+- Upload User Art Photos
+- Implement API
+- update user interactivity
+- UI
