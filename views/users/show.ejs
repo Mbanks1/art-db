@@ -15,7 +15,7 @@
     <p class="card-text">My Collection:</p>
 
     <% arts.forEach(art => { %>
-      <a href="/arts/<%= game._id %>"><%= art.title %></a><br>
+      <a href="/arts/<%= art._id %>"><%= art.title %></a><br>
     <% }) %><br>
     <!-- add/remove a user as a friend -->
     <% if (!userInfo._id.equals(user._id) && !user.friends.includes(userInfo._id)) { %>
