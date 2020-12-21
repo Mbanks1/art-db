@@ -6,10 +6,6 @@
          <tr>
             <th>Artist</th>
             <th>Title</th>
-            <th>Dimensions</th>
-            <th>Location</th>
-            <th>Medium</th>
-            <th>Year</th>
         </tr>
     </thead>
 
@@ -18,11 +14,7 @@
             <tr>
                 <td><%= a.artist %></td>
                 <td><%= a.title %></td>
-                <td><%= a.dimensions %></td>
-                <td><%= a.location %></td>
-                <td><%= a.medium  %></td>
-                <td><%= a.year  %></td>
-                <td><a href="/arts/<%= a._id %>">Details</a></td>
+                <td><a href="/arts/<%=a._id%>">Details</a></td>
                 <td><form action="arts/<%= a._id %>?_method=DELETE" class='delete-form' method="POST">
                     <button type='submit'>X</button>
                 </form></td>

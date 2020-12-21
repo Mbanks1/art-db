@@ -1,12 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const collectionSchema = new Schema({
-  title: String,
-}, {
-  timestamps: true
-})
-
 
 
 const userSchema = new Schema(
@@ -16,7 +10,6 @@ const userSchema = new Schema(
     avatar: String,
     googleId: String,
     friends: [{type: Schema.Types.ObjectId, ref: "User"}],
-    myCollection: [collectionSchema]
   },{
     timestamps: true,
   });

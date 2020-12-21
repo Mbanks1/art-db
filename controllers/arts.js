@@ -39,10 +39,9 @@ function deleteArt(req, res) {
 
 function show(req, res) {
     Art.findById(req.params.id)
-    .populate('Art').exec(function(err, art){
-        art.find({_id: {$nin: art}},
-            function(err, art){
-                res.render('arts/show',{title: 'Art Details', art})
-            })
+    .populate('favoritedBy').exec(function(err, art){
+       res.render("arts/show", {title: 'Art', art, user: req.user})
     })
 };
+
+

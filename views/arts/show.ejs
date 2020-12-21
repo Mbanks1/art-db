@@ -1,15 +1,23 @@
+
+
+
 <form class="card" style="width: 18rem;" action="/arts" method='POST'>
-    <label>Artist: </label>
-     <input type="text" name='artist'>
-    <label>Title:</label>
-     <input type="text" name="title">
-    <label>Dimensions:</label>
-     <input type="text" name="dimensions">
-    <label>Location:</label>
-     <input type="text" name="location">
-    <label>Medium:</label>
-     <input type="text" name="medium">
-    <label>Year:</label>
-     <input type="number" name="year">
-    <button type="submit">Add Work</button>
+    
+    <table class="table">
+        <thead class="table-light">
+           <tr>
+              <th>Artist</th>
+              <th>Title</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+          </tr>
+      </thead>
+  
+      <tbody>
+
+              <tr>
+                  <td><%= art.artist %></td>
+                  <td><%= art.title %></td>
 </form>
