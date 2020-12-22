@@ -7,6 +7,7 @@ module.exports = {
 function create(req, res) {
   Art.findById(req.params.id)
   .then((art) => {
+    console.log(art)
     art.reviews.push(req.body)
     art.save()
     .then(() => {

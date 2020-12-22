@@ -45,7 +45,8 @@ function show(req, res) {
 };
 
 function update(req, res) {
-    Art.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    Art.findByIdAndUpdate(req.params.id, 
+    req.body, {new: true})
     .then(() => {
     res.redirect("/arts")
     })

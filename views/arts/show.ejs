@@ -29,6 +29,13 @@
       </tbody>
     </table>
     
+ <% art.reviews.forEach(function(r) { %> 
+
+    <td><%= r.reviewer %></td>
+    <td><%= r.rating %></td>
+    <td><%= r.content %> </td>
+    <% }) %> 
+    
 
 <form action="/arts/<%= art._id %>/reviews" method="POST">
    
@@ -48,11 +55,12 @@
     </select>
    
     <input type="text" name="content">
+   <button type="submit">Add Review</button>
+    </form>
 
-    <form action="/arts/reviews">
-    <button type="submit">Add Review</button>
-    <button><a href="/arts/<%=art._id %>/edit"></a>Update</button>
-</form>
+
+<button><a href="/arts/<%=art._id %>/edit"></a>Update</button>
+
 
 <!-- </form> -->
 
