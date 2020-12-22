@@ -41,3 +41,4 @@ Eventually, ArtDB will be broken into 2 major parts. A fantasy collection to map
 - Implement API
 - update user interactivity
 - UI
+- fix functionality and CRUD bugs
