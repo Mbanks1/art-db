@@ -11,7 +11,7 @@ Eventually, ArtDB will be broken into 2 major parts. A fantasy collection to map
 
 ```
 ```
-[Heroku](https://artworkdb.herokuapp.com/)
+[Art DB](https://artworkdb.herokuapp.com/)
 
 ## Planning with Trello and Whimsical wireframing 
 
