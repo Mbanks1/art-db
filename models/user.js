@@ -8,6 +8,8 @@ const userSchema = new Schema(
     name: String,
     email: String,
     avatar: String,
+    alias: String,
+    bio: String,
     googleId: String,
     friends: [{type: Schema.Types.ObjectId, ref: "User"}],
   },{
@@ -15,7 +17,7 @@ const userSchema = new Schema(
   });
 
 
-  
+
 module.exports = mongoose.model("User", userSchema);
 
 

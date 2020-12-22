@@ -2,13 +2,15 @@
 
 <%= art.reviews.forEach(function(r) { %> 
 
-<td><%= r.reviewer %></td>
 <td><%= r.rating %></td>
 <td><%= r.content %> </td>
 <td><form action="arts/<%=r._id %>" method="POST">
 </form>
 </td>
 <% }) %> 
+<td><form action="arts/<%=r._id %>?_method=DELETE" class='delete-form' method="POST">
+    <button type='submit'>X</button>
+</form></td>
 
 
 

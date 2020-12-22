@@ -1,7 +1,8 @@
 const Art = require('../models/art')
 
 module.exports = {
-  create
+  create,
+  delete: deleteReview
 }
 
 function create(req, res) {
@@ -15,4 +16,11 @@ function create(req, res) {
     })
   })
 };
+
+function deleteReview(req, res) {
+    Art.findByIdAndDelete(req.params.id, (err) => {
+        res.redirect('/arts')
+    })
+};
+
 
