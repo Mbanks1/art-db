@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<%= art.reviews.forEach(function(r) { %> 
+
+<td><%= r.reviewer %></td>
+<td><%= r.rating %></td>
+<td><%= r.content %> </td>
+<td><form action="arts/<%=r._id %>" method="POST">
+</form>
+</td>
+<% }) %> 
+
+
+
+
+<%- include('../partials/footer') %>

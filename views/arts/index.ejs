@@ -18,7 +18,6 @@
                 <td><%= a.artist %></td>
                 <td><%= a.title %></td>
                 <td><a href="/arts/<%=a._id%>">Details</a></td>
-                <td><a href="/arts/<%=a._id %>/edit"></a>Update</td>
                 <td><form action="arts/<%= a._id %>?_method=DELETE" class='delete-form' method="POST">
                     <button type='submit'>X</button>
                 </form></td>
