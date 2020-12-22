@@ -8,6 +8,7 @@ router.get('/new',isLoggedIn, artCtrl.new);
 router.post('/', isLoggedIn, artCtrl.create);
 router.delete('/:id', isLoggedIn, artCtrl.delete);
 router.get('/:id', isLoggedIn, artCtrl.show);
+router.put("/:id", isLoggedIn, artCtrl.update);
 
 
 function isLoggedIn(req, res, next) {
@@ -15,5 +16,5 @@ function isLoggedIn(req, res, next) {
     res.redirect("/auth/google");
   };
 
-  
+
 module.exports = router;

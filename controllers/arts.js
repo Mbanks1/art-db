@@ -6,9 +6,9 @@ module.exports = {
         new: newArt,
         create,
         delete: deleteArt,
-        show
+        show,
+        update
 };
-
 
 function index(req,res){
     Art.find({}, function(err, arts){
@@ -43,5 +43,12 @@ function show(req, res) {
        res.render("arts/show", {title: 'Art', art, user: req.user})
     })
 };
+
+function update(req, res) {
+    Art.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .then(() => {
+    res.redirect("/arts")
+    })
+  };
 
 
