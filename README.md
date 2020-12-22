@@ -13,6 +13,7 @@ My vision for this app is to help solve the problem of managing a studio or smal
 
 ```
 ```
+## Heroku App:
 [Art DB](https://artworkdb.herokuapp.com/)
 
 ## Planning with Trello and Whimsical wireframing 
