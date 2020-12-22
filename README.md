@@ -10,10 +10,14 @@ Eventually, ArtDB will be broken into 2 major parts. A fantasy collection to map
 ```
 ```
 ## Planning with Trello and Whimsical wireframing 
-<img src="https://imgur.com/2EqCCbW" />
+
+![](https://imgur.com/2EqCCbW.png)
 
 ## Final Product 
 
+![](https://imgur.com/qAdFu5J.png)
+
+![](https://imgur.com/K58zYMd.png)
 
 ## Technologies Used:
 - HTML
