@@ -1,7 +1,10 @@
 <%- include('../partials/header') %>
 
 <h1>UPDATE ENTRY</h1>
-<form class="card" action="/arts/<%= a._id %>" method='PUT'>
+
+<form class="card" action="/arts/<%= a._id %>" 
+    method='PUT'>
+
      <input placeholder="Artist" type="text" name='artist'>
      <input placeholder="Title" type="text" name="title">
      <input placeholder="Dimensions" type="text" name="dimensions">
@@ -9,8 +12,9 @@
      <input placeholder="Medium" type="text" name="medium">
      <input placeholder="Year" type="year" name="year">
     <button class="btn btn-primary" type="submit">Add Work</button>
+
 </form>
-</div>
+
 
 
 
